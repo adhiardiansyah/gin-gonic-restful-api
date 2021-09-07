@@ -101,7 +101,7 @@ func (c *bookController) Update(context *gin.Context) {
 		response := helper.BuildResponse(true, "OK", result)
 		context.JSON(http.StatusOK, response)
 	} else {
-		response := helper.BuildErrorResponse("Anda tidak diizinkan", "Anda tidak ownernya", helper.EmptyObj{})
+		response := helper.BuildErrorResponse("Anda tidak diizinkan", "Anda bukan pemiliknya", helper.EmptyObj{})
 		context.JSON(http.StatusForbidden, response)
 	}
 }
@@ -126,7 +126,7 @@ func (c *bookController) Delete(context *gin.Context) {
 		response := helper.BuildResponse(true, "Terhapus", helper.EmptyObj{})
 		context.JSON(http.StatusOK, response)
 	} else {
-		response := helper.BuildErrorResponse("Anda tidak diizinkan", "Anda tidak ownernya", helper.EmptyObj{})
+		response := helper.BuildErrorResponse("Anda tidak diizinkan", "Anda bukan pemiliknya", helper.EmptyObj{})
 		context.JSON(http.StatusForbidden, response)
 	}
 }
