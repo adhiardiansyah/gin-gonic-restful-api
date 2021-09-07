@@ -6,6 +6,7 @@ require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/gin-gonic/gin v1.7.4
 	github.com/joho/godotenv v1.3.0
+	github.com/mashingan/smapping v0.1.11
 	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9
 	gorm.io/driver/mysql v1.1.2
 	gorm.io/gorm v1.21.14
@@ -22,7 +23,6 @@ require (
 	github.com/jinzhu/now v1.1.2 // indirect
 	github.com/json-iterator/go v1.1.9 // indirect
 	github.com/leodido/go-urn v1.2.0 // indirect
-	github.com/mashingan/smapping v0.1.11 // indirect
 	github.com/mattn/go-isatty v0.0.12 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421 // indirect
 	github.com/modern-go/reflect2 v0.0.0-20180701023420-4b7aa43c6742 // indirect
