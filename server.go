@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/adhiardiansyah/gin-gonic-restful-api/config"
 	"github.com/adhiardiansyah/gin-gonic-restful-api/controller"
+	"github.com/adhiardiansyah/gin-gonic-restful-api/middleware"
 	"github.com/adhiardiansyah/gin-gonic-restful-api/repository"
 	"github.com/adhiardiansyah/gin-gonic-restful-api/service"
 
@@ -30,7 +31,7 @@ func main() {
 		authRoutes.POST("/register", authController.Register)
 	}
 
-	userRoutes := r.Group("api/user")
+	userRoutes := r.Group("api/user", middleware.AuthorizeJWT(jwtService))
 	{
 		userRoutes.GET("/profile", userController.Profile)
 		userRoutes.PUT("/profile", userController.Update)
