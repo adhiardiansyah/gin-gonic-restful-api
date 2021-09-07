@@ -3,6 +3,8 @@ package main
 import (
 	"github.com/adhiardiansyah/gin-gonic-restful-api/config"
 	"github.com/adhiardiansyah/gin-gonic-restful-api/controller"
+	"github.com/adhiardiansyah/gin-gonic-restful-api/repository"
+	"github.com/adhiardiansyah/gin-gonic-restful-api/service"
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
@@ -10,7 +12,10 @@ import (
 
 var (
 	db             *gorm.DB                  = config.SetupDatabaseConnection()
-	authController controller.AuthController = controller.NewAuthController()
+	userRepository repository.UserRepository = repository.NewUserRepository(db)
+	jwtService     service.JWTService        = service.NewJWTService()
+	authService    service.AuthService       = service.NewAuthService(userRepository)
+	authController controller.AuthController = controller.NewAuthController(authService, jwtService)
 )
 
 func main() {
