@@ -1,4 +1,4 @@
-module github.com/adhiardiansyah/gin_gonic_restful_api
+module github.com/adhiardiansyah/gin-gonic-restful-api
 
 go 1.17
 
