@@ -38,7 +38,7 @@ func (c *userController) Update(context *gin.Context) {
 		return
 	}
 
-	authHeader := context.GetHeader("Autorization")
+	authHeader := context.GetHeader("Authorization")
 	token, errToken := c.jwtService.ValidateToken(authHeader)
 	if errToken != nil {
 		panic(errToken.Error())
