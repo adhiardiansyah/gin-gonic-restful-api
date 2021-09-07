@@ -27,7 +27,7 @@ func SetupDatabaseConnection() *gorm.DB {
 		panic("Gagal menghubungkan ke database")
 	}
 
-	db.AutoMigrate()
+	// db.AutoMigrate()
 	return db
 }
 
