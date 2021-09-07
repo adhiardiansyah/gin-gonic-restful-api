@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/adhiardiansyah/gin-gonic-restful-api/entity"
 	"github.com/joho/godotenv"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
@@ -27,7 +28,7 @@ func SetupDatabaseConnection() *gorm.DB {
 		panic("Gagal menghubungkan ke database")
 	}
 
-	// db.AutoMigrate()
+	db.AutoMigrate(&entity.Book{}, &entity.User{})
 	return db
 }
 
