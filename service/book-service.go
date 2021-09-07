@@ -15,7 +15,7 @@ type BookService interface {
 	Update(b dto.BookUpdateDTO) entity.Book
 	Delete(b entity.Book)
 	All() []entity.Book
-	FindById(bookID uint64) entity.Book
+	FindByID(bookID uint64) entity.Book
 	IsAllowedToEdit(userID string, bookID uint64) bool
 }
 
