@@ -16,7 +16,7 @@ func SetupDatabaseConnection() *gorm.DB {
 		panic("Gagal terhubung ke file env")
 	}
 
-	dbUser := os.Getenv("DBUSER")
+	dbUser := os.Getenv("DB_USER")
 	dbPass := os.Getenv("DB_PASS")
 	dbHost := os.Getenv("DB_HOST")
 	dbName := os.Getenv("DB_NAME")
