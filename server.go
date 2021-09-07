@@ -33,7 +33,7 @@ func main() {
 	userRoutes := r.Group("api/user")
 	{
 		userRoutes.GET("/profile", userController.Profile)
-		userRoutes.PUT("/profile", userController.Profile)
+		userRoutes.PUT("/profile", userController.Update)
 	}
 
 	r.Run()
