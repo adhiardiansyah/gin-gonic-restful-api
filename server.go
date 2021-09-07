@@ -9,12 +9,12 @@ import (
 )
 
 var (
-	db             *gorm.DB                  = config.SetupDatabaseConnection()
+	db             *gorm.DB                  = config.SetupatDatabaseConnection()
 	authController controller.AuthController = controller.NewAuthController()
 )
 
 func main() {
-	defer config.CloseDatabaseConnection()
+	defer config.CloseDatabaseConnection(db)
 	r := gin.Default()
 
 	authRoutes := r.Group("api/auth")
