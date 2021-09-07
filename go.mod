@@ -3,6 +3,7 @@ module github.com/adhiardiansyah/gin-gonic-restful-api
 go 1.17
 
 require (
+	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/gin-gonic/gin v1.7.4
 	github.com/joho/godotenv v1.3.0
 	gorm.io/driver/mysql v1.1.2
