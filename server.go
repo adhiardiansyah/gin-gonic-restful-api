@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	db             *gorm.DB                  = config.SetupatDatabaseConnection()
+	db             *gorm.DB                  = config.SetupDatabaseConnection()
 	authController controller.AuthController = controller.NewAuthController()
 )
 

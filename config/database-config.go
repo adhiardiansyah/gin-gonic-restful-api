@@ -10,7 +10,7 @@ import (
 )
 
 // SetupatDatabaseConnection adalah menghubungkan koneksi ke database
-func SetupatDatabaseConnection() *gorm.DB {
+func SetupDatabaseConnection() *gorm.DB {
 	errEnv := godotenv.Load()
 	if errEnv != nil {
 		panic("Gagal terhubung ke file env")
